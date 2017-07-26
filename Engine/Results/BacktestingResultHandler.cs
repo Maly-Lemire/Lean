@@ -415,10 +415,11 @@ namespace QuantConnect.Lean.Engine.Results
                     if (result != null)
                     {
                         //3. Get Storage Location:
-                        key = "backtests/" + _job.UserId + "/" + _job.ProjectId + "/" + _job.BacktestId + ".json";
+                        //key = "backtests/" + _job.UserId + "/" + _job.ProjectId + "/" + _job.BacktestId + ".json";
+                        key = _job.BacktestId + ".json";
 
                         //4. Serialize to JSON:
-                        serialized = JsonConvert.SerializeObject(result.Results);
+                        //serialized = JsonConvert.SerializeObject(result.Results);
                     }
                     else 
                     {
