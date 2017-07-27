@@ -982,7 +982,7 @@ namespace QuantConnect.Lean.Engine.Results
 
         private string CreateKey(string suffix, string dateFormat = "yyyy-MM-dd")
         {
-            return string.Format("{2}-{3}_{4}.json", _job.DeployId, DateTime.UtcNow.ToString(dateFormat), suffix);
+            return string.Format("{0}-{1}_{2}.json", _job.DeployId, DateTime.UtcNow.ToString(dateFormat), suffix);
         }
 
 
